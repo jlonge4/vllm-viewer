@@ -66,6 +66,51 @@ npx pnpm run dev
 Open your favorite browser and navigate to:
 **[http://localhost:3000](http://localhost:3000)**
 
+### 4. Load Sample Benchmark Data (Optional)
+To quickly test the dashboard with sample vLLM benchmark data:
+
+1. Once the dashboard loads, click **"Load Example Data"** button in the JSON input area, OR
+2. Download the sample data file: `public/sample_benchmark_results.json`
+3. Paste its contents into the JSON input field and click **"Parse & Visualize"**
+
+The sample data includes 4 benchmark runs with different configurations (varying tensor parallelism, batch sizes, and concurrency levels) to demonstrate the dashboard's visualization capabilities.
+
+---
+
+## 📊 Data Format
+
+The viewer expects benchmark data in JSON format matching the vLLM benchmark output structure:
+
+```json
+[
+  {
+    "config": {
+      "client_args": {...},
+      "server_args": {...},
+      "server_cmd_args": [...]
+    },
+    "results": {
+      "backend": "vllm",
+      "request_throughput": 2.32,
+      "input_throughput": 1185.62,
+      "output_throughput": 592.81,
+      "mean_ttft_ms": 85.34,
+      "median_ttft_ms": 78.23,
+      "mean_itl_ms": 13.18,
+      "median_itl_ms": 12.86,
+      ...
+    },
+    "cmd": "vllm serve ...",
+    "metadata": {...}
+  }
+]
+```
+
+For llm-optimizer users, use the `--output-json` flag:
+```bash
+python -m llm_optimizer.cli benchmark --model meta-llama/Llama-3.1-8B --output-json results.json
+```
+
 ---
 
 ## 🛠️ Additional Commands

@@ -1,0 +1,258 @@
+[
+  {
+    "config": {
+      "client_args": {
+        "dataset_name": "sharegpt",
+        "sharegpt_output_len": 256,
+        "random_input_len": 512
+      },
+      "server_args": {
+        "tensor_parallel_size": 1,
+        "max_num_batched_tokens": 4096,
+        "max_num_seqs": 16
+      },
+      "server_cmd_args": [
+        "--tensor-parallel-size=1",
+        "--max-num-batched-tokens=4096",
+        "--max-num-seqs=16"
+      ]
+    },
+    "results": {
+      "backend": "vllm",
+      "dataset_name": "sharegpt",
+      "request_rate": "inf",
+      "max_concurrency": 8,
+      "duration": 432.12,
+      "completed": 1000,
+      "total_input_tokens": 512000,
+      "total_output_tokens": 256000,
+      "total_output_tokens_retokenized": 255910,
+      "request_throughput": 2.3163,
+      "input_throughput": 1185.62,
+      "output_throughput": 592.81,
+      "mean_e2e_latency_ms": 3450.23,
+      "median_e2e_latency_ms": 3412.15,
+      "std_e2e_latency_ms": 245.67,
+      "p95_e2e_latency_ms": 4001.32,
+      "p99_e2e_latency_ms": 4210.56,
+      "mean_ttft_ms": 85.34,
+      "median_ttft_ms": 78.23,
+      "std_ttft_ms": 34.56,
+      "p95_ttft_ms": 156.78,
+      "p99_ttft_ms": 201.45,
+      "mean_tpot_ms": 13.21,
+      "median_tpot_ms": 12.89,
+      "std_tpot_ms": 2.34,
+      "p95_tpot_ms": 18.90,
+      "p99_tpot_ms": 21.34,
+      "mean_itl_ms": 13.18,
+      "median_itl_ms": 12.86,
+      "std_itl_ms": 2.41,
+      "p95_itl_ms": 18.67,
+      "p99_itl_ms": 20.89,
+      "concurrency": 8.0,
+      "accept_length": null
+    },
+    "cmd": "vllm serve meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --tensor-parallel-size=1 --max-num-batched-tokens=4096 --max-num-seqs=16",
+    "constraints": [],
+    "metadata": {
+      "gpu_type": "A100",
+      "gpu_count": 1,
+      "model_tag": "Llama-3.1-8B",
+      "input_tokens": 512,
+      "output_tokens": 256
+    }
+  },
+  {
+    "config": {
+      "client_args": {
+        "dataset_name": "sharegpt",
+        "sharegpt_output_len": 256,
+        "random_input_len": 512
+      },
+      "server_args": {
+        "tensor_parallel_size": 2,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 32
+      },
+      "server_cmd_args": [
+        "--tensor-parallel-size=2",
+        "--max-num-batched-tokens=8192",
+        "--max-num-seqs=32"
+      ]
+    },
+    "results": {
+      "backend": "vllm",
+      "dataset_name": "sharegpt",
+      "request_rate": "inf",
+      "max_concurrency": 16,
+      "duration": 243.56,
+      "completed": 1000,
+      "total_input_tokens": 512000,
+      "total_output_tokens": 256000,
+      "total_output_tokens_retokenized": 255880,
+      "request_throughput": 4.1097,
+      "input_throughput": 2102.34,
+      "output_throughput": 1051.17,
+      "mean_e2e_latency_ms": 3892.45,
+      "median_e2e_latency_ms": 3834.67,
+      "std_e2e_latency_ms": 312.34,
+      "p95_e2e_latency_ms": 4523.89,
+      "p99_e2e_latency_ms": 4678.12,
+      "mean_ttft_ms": 112.56,
+      "median_ttft_ms": 102.34,
+      "std_ttft_ms": 48.90,
+      "p95_ttft_ms": 201.23,
+      "p99_ttft_ms": 267.89,
+      "mean_tpot_ms": 14.89,
+      "median_tpot_ms": 14.34,
+      "std_tpot_ms": 3.12,
+      "p95_tpot_ms": 21.45,
+      "p99_tpot_ms": 24.56,
+      "mean_itl_ms": 14.76,
+      "median_itl_ms": 14.23,
+      "std_itl_ms": 3.28,
+      "p95_itl_ms": 21.12,
+      "p99_itl_ms": 24.34,
+      "concurrency": 16.0,
+      "accept_length": null
+    },
+    "cmd": "vllm serve meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --tensor-parallel-size=2 --max-num-batched-tokens=8192 --max-num-seqs=32",
+    "constraints": [],
+    "metadata": {
+      "gpu_type": "A100",
+      "gpu_count": 2,
+      "model_tag": "Llama-3.1-8B",
+      "input_tokens": 512,
+      "output_tokens": 256
+    }
+  },
+  {
+    "config": {
+      "client_args": {
+        "dataset_name": "sharegpt",
+        "sharegpt_output_len": 256,
+        "random_input_len": 512
+      },
+      "server_args": {
+        "tensor_parallel_size": 4,
+        "max_num_batched_tokens": 16384,
+        "max_num_seqs": 64
+      },
+      "server_cmd_args": [
+        "--tensor-parallel-size=4",
+        "--max-num-batched-tokens=16384",
+        "--max-num-seqs=64"
+      ]
+    },
+    "results": {
+      "backend": "vllm",
+      "dataset_name": "sharegpt",
+      "request_rate": "inf",
+      "max_concurrency": 32,
+      "duration": 132.78,
+      "completed": 1000,
+      "total_input_tokens": 512000,
+      "total_output_tokens": 256000,
+      "total_output_tokens_retokenized": 255795,
+      "request_throughput": 7.5306,
+      "input_throughput": 3853.12,
+      "output_throughput": 1926.56,
+      "mean_e2e_latency_ms": 4245.67,
+      "median_e2e_latency_ms": 4156.23,
+      "std_e2e_latency_ms": 425.67,
+      "p95_e2e_latency_ms": 5234.78,
+      "p99_e2e_latency_ms": 5567.89,
+      "mean_ttft_ms": 145.78,
+      "median_ttft_ms": 132.56,
+      "std_ttft_ms": 61.23,
+      "p95_ttft_ms": 289.34,
+      "p99_ttft_ms": 345.67,
+      "mean_tpot_ms": 16.56,
+      "median_tpot_ms": 15.98,
+      "std_tpot_ms": 4.34,
+      "p95_tpot_ms": 25.67,
+      "p99_tpot_ms": 29.12,
+      "mean_itl_ms": 16.43,
+      "median_itl_ms": 15.89,
+      "std_itl_ms": 4.45,
+      "p95_itl_ms": 25.34,
+      "p99_itl_ms": 28.90,
+      "concurrency": 32.0,
+      "accept_length": null
+    },
+    "cmd": "vllm serve meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --tensor-parallel-size=4 --max-num-batched-tokens=16384 --max-num-seqs=64",
+    "constraints": [],
+    "metadata": {
+      "gpu_type": "A100",
+      "gpu_count": 4,
+      "model_tag": "Llama-3.1-8B",
+      "input_tokens": 512,
+      "output_tokens": 256
+    }
+  },
+  {
+    "config": {
+      "client_args": {
+        "dataset_name": "sharegpt",
+        "sharegpt_output_len": 512,
+        "random_input_len": 1024
+      },
+      "server_args": {
+        "tensor_parallel_size": 2,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 32
+      },
+      "server_cmd_args": [
+        "--tensor-parallel-size=2",
+        "--max-num-batched-tokens=8192",
+        "--max-num-seqs=32"
+      ]
+    },
+    "results": {
+      "backend": "vllm",
+      "dataset_name": "sharegpt",
+      "request_rate": "inf",
+      "max_concurrency": 16,
+      "duration": 289.34,
+      "completed": 800,
+      "total_input_tokens": 819200,
+      "total_output_tokens": 409600,
+      "total_output_tokens_retokenized": 409120,
+      "request_throughput": 2.7660,
+      "input_throughput": 2832.45,
+      "output_throughput": 1416.23,
+      "mean_e2e_latency_ms": 5678.90,
+      "median_e2e_latency_ms": 5612.34,
+      "std_e2e_latency_ms": 534.67,
+      "p95_e2e_latency_ms": 6789.12,
+      "p99_e2e_latency_ms": 7123.45,
+      "mean_ttft_ms": 134.56,
+      "median_ttft_ms": 123.45,
+      "std_ttft_ms": 56.78,
+      "p95_ttft_ms": 267.89,
+      "p99_ttft_ms": 312.34,
+      "mean_tpot_ms": 13.89,
+      "median_tpot_ms": 13.45,
+      "std_tpot_ms": 2.67,
+      "p95_tpot_ms": 20.12,
+      "p99_tpot_ms": 23.45,
+      "mean_itl_ms": 13.76,
+      "median_itl_ms": 13.34,
+      "std_itl_ms": 2.78,
+      "p95_itl_ms": 19.89,
+      "p99_itl_ms": 23.12,
+      "concurrency": 16.0,
+      "accept_length": null
+    },
+    "cmd": "vllm serve meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --tensor-parallel-size=2 --max-num-batched-tokens=8192 --max-num-seqs=32",
+    "constraints": [],
+    "metadata": {
+      "gpu_type": "A100",
+      "gpu_count": 2,
+      "model_tag": "Llama-3.1-8B",
+      "input_tokens": 1024,
+      "output_tokens": 512
+    }
+  }
+]
